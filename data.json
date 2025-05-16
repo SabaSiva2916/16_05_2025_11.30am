@@ -1,0 +1,27 @@
+{
+	"compId": 10101,
+	"mobileNumber": 80159098840,
+	"employees": [
+		{
+			"id": 10,
+			"first_name": "Anand",
+			"department": "HR Manager"
+		},
+		{
+			"id": 11,
+			"first_name": "Suresh",
+			"department": "Manager"
+		},
+		{
+			"id": 12,
+			"first_name": "Venkatesh",
+			"department": "Developer"
+		},
+		{
+			"id": 13,
+			"first_name": "Balaji",
+			"department": "Operational Head"
+		}
+	],
+	"companyName": "Greens Institute"
+}
