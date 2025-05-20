@@ -1,5 +1,7 @@
 package org.pjo;
 
+import static io.restassured.RestAssured.given;
+
 import org.json.JSONObject;
 import org.testng.ITestContext;
 import org.testng.annotations.Test;
@@ -19,7 +21,6 @@ public class Test123 {
 	@Test(description = "Ordering Books")
 	private void tc01(ITestContext context) {
 
-		
 		JSONObject obj = new JSONObject();
 		obj.put("bookId", 1);
 		obj.put("customerName", "Subash");
@@ -86,9 +87,12 @@ public class Test123 {
 		System.out.println(post.getBody().asPrettyString());
 	}
 
-}
+	@Test(description = "Reqres Get list of users")
+	private void tc06() {
+		RestAssured.baseURI = "https://reqres.in/api/users/2";
+		Response response = given().header("x-api-key", "reqres-free-v1").when().get();
+		System.out.println(response.getBody().asPrettyString());
+		System.out.println(response.getStatusCode());
+	}
 
-//Create Order --->order Id -->
-//Update Order by chaging the customer name
-//Delete the order
-//Check whether its delete or not
+}
