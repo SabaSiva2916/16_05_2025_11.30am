@@ -21,6 +21,15 @@ public class ValidateResponseBody {
 		String id = response.jsonPath().get("data.id").toString();
 		System.out.println(id);
 
+		String str = "java programming language";
+		// We need to reverse the given String
+		String output = "";
+		for (int i = str.length() - 1; i >= 0; i--) {
+			output = output + str.charAt(i);
+		}
+
+		System.out.println("Reverse of given String :" + output);
+
 	}
 
 }
